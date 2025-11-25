@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deployer Test - GitHub Pages</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2563eb;
+        }
+        .status {
+            padding: 15px;
+            background: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            margin: 20px 0;
+        }
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Rhappsody Deployer Test</h1>
+
+    <div class="status">
+        ✅ Successfully deployed to GitHub Pages using <code>@rhapp-platform/deployer</code>
+    </div>
+
+    <h2>Deployment Info</h2>
+    <ul>
+        <li><strong>Target:</strong> github-pages</li>
+        <li><strong>Deployed:</strong> <span id="timestamp"></span></li>
+        <li><strong>Adapter:</strong> GitHub Pages REST API</li>
+    </ul>
+
+    <h2>About This Deployer</h2>
+    <p>
+        This page was deployed using the Rhappsody multi-target deployment orchestrator,
+        which supports deploying to multiple platforms simultaneously:
+    </p>
+    <ul>
+        <li>Cloudflare R2 (object storage)</li>
+        <li>Tigris (global storage)</li>
+        <li>Cloudflare KV (key-value)</li>
+        <li>Cloudflare D1 (SQL database)</li>
+        <li>GitHub Pages (static hosting)</li>
+        <li>Static (local filesystem)</li>
+    </ul>
+
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toISOString();
+    </script>
+</body>
+</html>
